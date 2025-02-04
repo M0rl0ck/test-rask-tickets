@@ -1,0 +1,5 @@
+.controls {
+  width: 320px;
+  background-color: var(--background-box);
+  padding: 25px;
+}

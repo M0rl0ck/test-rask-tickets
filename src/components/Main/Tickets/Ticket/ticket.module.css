@@ -1,0 +1,5 @@
+.ticket {
+  display: flex;
+  background-color: var(--background-box);
+  border-radius: 0 5px 0 5px;
+}

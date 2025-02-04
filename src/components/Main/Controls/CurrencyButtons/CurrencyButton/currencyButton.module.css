@@ -1,0 +1,27 @@
+.currency_button {
+  padding: 16px 30px;
+  color: var(--color-primary);
+  background-color: var(--background-box);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+}
+.currency_button:hover {
+  background-color: var(--color-primary-light);
+}
+
+.first {
+  border-radius: 5px 0 0 5px;
+}
+
+.last {
+  border-radius: 0 5px 5px 0;
+}
+
+.active {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.active:hover {
+  background-color: var(--color-primary);
+}
