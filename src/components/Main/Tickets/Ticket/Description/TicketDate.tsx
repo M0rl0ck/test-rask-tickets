@@ -21,11 +21,11 @@ function TicketDate({ time, date, name, code }: TicketDateProps) {
     });
   return (
     <div className={Style.date}>
-      <p>{time}</p>
-      <p>
+      <p className={Style.time}>{time}</p>
+      <p className={Style.city}>
         {code}, {name}
       </p>
-      <p> {dateStr}</p>
+      <p className={Style.dateStr}> {dateStr}</p>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import Styles from "./inputCountChanges.module.css";
+import Styles from "../filtersByChanges.module.css";
 import {
   CountChanges,
   setFilter,
@@ -19,8 +19,9 @@ function InputCountChanges({ counts, labelText }: InputCountChangesProps) {
   const setOneFilter = () => dispatch(setOnlyOneFilter(counts));
   return (
     <li className={Styles.inputCountChanges}>
-      <label>
+      <label className={Styles.label}>
         <input
+          className={Styles.input}
           type="checkbox"
           checked={countsFilter[counts]}
           onChange={changeFilter}

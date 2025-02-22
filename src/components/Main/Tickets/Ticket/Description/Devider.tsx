@@ -8,10 +8,10 @@ interface DividerProps {
 function Divider({ stops }: DividerProps) {
   return (
     <div className={Style.divider}>
-      <div>
+      <div className={Style.stops}>
         {stops}{" "}
         {stops === 0 ? "пересадок" : stops === 1 ? "пересадка" : "пересадки"}
-        <img src={Image} alt="plane" />
+        <img className={Style.plane} src={Image} alt="plane" />
       </div>
     </div>
   );

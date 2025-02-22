@@ -1,16 +1,22 @@
-import Style from "./Tickets.module.css";
+import Styles from "./tickets.module.css";
 import { useGetTickets } from "./useGetTickets";
 import { Ticket } from "./Ticket/Ticket";
+import { TransitionGroup } from "react-transition-group";
+import { WrapperTransition } from "./WrapperTransition";
 
 function Tickets() {
   const { filteredData, isLoading } = useGetTickets();
   return (
-    <div className={Style.tickets}>
+    <>
       {isLoading && <div>Loading...</div>}
-      {filteredData.map((ticket) => (
-        <Ticket key={ticket.id} ticket={ticket} />
-      ))}
-    </div>
+      <TransitionGroup component="div" className={Styles.tickets}>
+        {filteredData.map((ticket) => (
+          <WrapperTransition key={ticket.id} id={ticket.id} Styles={Styles}>
+            <Ticket ticket={ticket} />
+          </WrapperTransition>
+        ))}
+      </TransitionGroup>
+    </>
   );
 }
 

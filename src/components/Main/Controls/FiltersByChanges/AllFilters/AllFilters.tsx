@@ -3,7 +3,7 @@ import {
   useAppDispatch,
   useAppSelector,
 } from "../../../../../store";
-import Styles from "./allFilters.module.css";
+import Styles from "../filtersByChanges.module.css";
 
 function AllFilters() {
   const countsFilter = useAppSelector((state) => state.filterReducer);
@@ -12,8 +12,13 @@ function AllFilters() {
   const changeFilter = () => dispatch(setAllFilter());
   return (
     <li className={Styles.inputCountChanges}>
-      <label>
-        <input type="checkbox" checked={isAllFilter} onChange={changeFilter} />
+      <label className={Styles.label}>
+        <input
+          className={Styles.input}
+          type="checkbox"
+          checked={isAllFilter}
+          onChange={changeFilter}
+        />
         Все
       </label>
     </li>

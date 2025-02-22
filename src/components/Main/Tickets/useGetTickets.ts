@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useAppSelector, useGetTicketsQuery } from "../../../store";
-import type { Ticket } from "../../../types";
+import type { TicketType } from "../../../types";
 
 function useGetTickets() {
   const { data, isLoading, isError } = useGetTicketsQuery();
   const filter = useAppSelector((state) => state.filterReducer);
-  const [filteredData, setFilteredData] = useState<Ticket[]>([]);
+  const [filteredData, setFilteredData] = useState<TicketType[]>([]);
   useEffect(() => {
     if (data) {
       const newData = data.tickets.filter((ticket) => {
